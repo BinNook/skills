@@ -1,0 +1,28 @@
+{
+  "name": "binnook-skills",
+  "version": "0.1.0",
+  "description": "Install Codex skills from GitHub via npx",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "binnook-skills": "bin/binnook-skills.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "skills"
+  ],
+  "keywords": [
+    "codex",
+    "skills",
+    "cli",
+    "npx"
+  ],
+  "homepage": "https://github.com/BinNook/skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BinNook/skills.git"
+  }
+}
