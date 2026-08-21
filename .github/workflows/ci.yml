@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: CLI syntax check
+        run: node --check bin/binnook-skills.js
+
+      - name: Skill frontmatter validation
+        run: node scripts/validate-skills.js
+
+      - name: CLI smoke test
+        run: |
+          node bin/binnook-skills.js --version
+          node bin/binnook-skills.js --help
+          # smoke test install flow against this repo (needs a committed ref)
+          node bin/binnook-skills.js list "file://$PWD" --dest /tmp/dest
+          node bin/binnook-skills.js add "file://$PWD" --skill markdown2pdf --dest /tmp/dest
+          test -f /tmp/dest/markdown2pdf/SKILL.md

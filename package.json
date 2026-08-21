@@ -11,7 +11,8 @@
     "node": ">=18"
   },
   "files": [
-    "bin"
+    "bin",
+    "scripts"
   ],
   "keywords": [
     "codex",
