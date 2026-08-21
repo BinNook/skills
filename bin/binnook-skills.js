@@ -31,8 +31,8 @@ Options:
   --force             Overwrite if the destination already exists.
 
 Examples:
-  npx binnook-skills add https://github.com/BinNook/skills --skill grill-me
-  npx binnook-skills add https://github.com/BinNook/skills --skill grill-me --ref dev --force
+  npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf
+  npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf --ref dev --force
   npx binnook-skills list https://github.com/BinNook/skills
 
 Skills are looked up at the repo root, under skills/, skills/.curated,

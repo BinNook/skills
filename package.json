@@ -11,8 +11,7 @@
     "node": ">=18"
   },
   "files": [
-    "bin",
-    "grill-me"
+    "bin"
   ],
   "keywords": [
     "codex",

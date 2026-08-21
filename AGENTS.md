@@ -24,7 +24,7 @@ There is no build step. Validate changes locally (requires `node` ≥18 and `git
 - `node bin/binnook-skills.js --help` — show CLI usage.
 - `node --check bin/binnook-skills.js` — syntax check the CLI.
 - `node bin/binnook-skills.js list file://$PWD` — list skills from a local clone.
-- `node bin/binnook-skills.js add file://$PWD --skill grill-me --dest /tmp/dest` — install a skill to a temp dir to verify the flow.
+- `node bin/binnook-skills.js add file://$PWD --skill markdown2pdf --dest /tmp/dest` — install a skill to a temp dir to verify the flow.
 
 Smoke tests need a committed repo: `git commit` before testing so `--depth 1` clones have a ref.
 
@@ -39,7 +39,7 @@ Installed to `$CODEX_HOME/skills/<name>` (default `~/.codex/skills`). Options: `
 
 ## Coding Style & Naming Conventions
 
-- Skill folders: lowercase kebab-case (e.g. `grill-me`).
+- Skill folders: lowercase kebab-case (e.g. `markdown2pdf`).
 - `SKILL.md` body: keep under 500 lines; move detail to `references/` and link it from the body.
 - Frontmatter `description` must state *what* the skill does and *when* to use it.
 - CLI: zero-dependency Node, 2-space indent, double quotes, no semicolons required.
@@ -56,7 +56,7 @@ No automated test suite. Before opening a PR:
 
 Use **Conventional Commits**:
 
-- `feat(skill): add grill-me skill`
+- `feat(skill): add markdown2pdf skill`
 - `fix(cli): correct ref checkout fallback`
 - `docs: clarify install options`
 

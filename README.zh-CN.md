@@ -7,7 +7,7 @@
 用一条命令即可从任意 GitHub 仓库安装单个 skill：
 
 ```bash
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf
 ```
 
 ## 特性
@@ -35,20 +35,20 @@ npx binnook-skills add https://github.com/BinNook/skills --skill <skill-name>
 从指定分支、标签或提交安装：
 
 ```bash
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me --ref dev
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf --ref dev
 ```
 
 覆盖已有安装，或以不同名称安装：
 
 ```bash
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me --force
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me --name grill-me-local
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf --force
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf --name markdown2pdf-local
 ```
 
 安装到自定义目录：
 
 ```bash
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me --dest ~/my-skills
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf --dest ~/my-skills
 ```
 
 ## 列出可用 skill
@@ -115,17 +115,17 @@ CLI 会按以下顺序查找包含 `SKILL.md` 的 skill 文件夹：
 └── assets/             # 可选：用于输出的模板、图标、字体
 ```
 
-示例 —— `grill-me/SKILL.md`：
+示例 —— `markdown2pdf/SKILL.md`：
 
 ```markdown
 ---
-name: grill-me
-description: Grills the user with quick-fire questions. Use when the user wants rapid-fire question practice.
+name: markdown2pdf
+description: 将包含 Mermaid 图表的 Markdown 文件转换为格式完善的 PDF 文档。
 ---
 
-# Grill Me
+# Markdown 转 PDF
 
-Ask one question at a time, wait for the answer, then follow up immediately.
+渲染 Markdown（含 Mermaid 图表）为格式完善的 PDF。
 ```
 
 请将 `SKILL.md` 控制在 500 行以内；详细内容移入 `references/` 并在正文中链接。

@@ -7,7 +7,7 @@ A curated collection of [Codex](https://github.com/openai/codex) skills, install
 Install a single skill from any GitHub repository with one command:
 
 ```bash
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf
 ```
 
 ## Features
@@ -35,20 +35,20 @@ This downloads the skill and copies it into `$CODEX_HOME/skills/<skill-name>` (d
 Install from a specific branch, tag, or commit:
 
 ```bash
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me --ref dev
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf --ref dev
 ```
 
 Overwrite an existing install, or install under a different name:
 
 ```bash
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me --force
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me --name grill-me-local
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf --force
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf --name markdown2pdf-local
 ```
 
 Install into a custom directory:
 
 ```bash
-npx binnook-skills add https://github.com/BinNook/skills --skill grill-me --dest ~/my-skills
+npx binnook-skills add https://github.com/BinNook/skills --skill markdown2pdf --dest ~/my-skills
 ```
 
 ## List available skills
@@ -115,17 +115,17 @@ Each skill is one folder with a required `SKILL.md`:
 └── assets/             # optional: templates, icons, fonts used in output
 ```
 
-Example — `grill-me/SKILL.md`:
+Example — `markdown2pdf/SKILL.md`:
 
 ```markdown
 ---
-name: grill-me
-description: Grills the user with quick-fire questions. Use when the user wants rapid-fire question practice.
+name: markdown2pdf
+description: Convert Markdown files containing Mermaid diagrams into polished PDF documents.
 ---
 
-# Grill Me
+# Markdown to PDF
 
-Ask one question at a time, wait for the answer, then follow up immediately.
+Render Markdown (with Mermaid diagrams) to a well-formatted PDF.
 ```
 
 Keep `SKILL.md` under 500 lines; move detail into `references/` and link to it from the body.
